@@ -110,13 +110,13 @@ public class SnakePanel extends JPanel implements KeyListener, ActionListener{
 			}
 			isStarted = ! isStarted;
 //			repaint();
-		} else if (keyCode == KeyEvent.VK_UP && direction != "down") { // change direction
+		} else if (keyCode == KeyEvent.VK_UP || keyCode == KeyEvent.VK_W && direction != "down") { // change direction
 			direction = "up";
-		} else if (keyCode == KeyEvent.VK_DOWN && direction != "up") {
+		} else if (keyCode == KeyEvent.VK_DOWN || keyCode == KeyEvent.VK_S && direction != "up") {
 			direction = "down";
-		} else if (keyCode == KeyEvent.VK_RIGHT && direction != "left") {
+		} else if (keyCode == KeyEvent.VK_RIGHT || keyCode == KeyEvent.VK_D && direction != "left") {
 			direction = "right";
-		} else if (keyCode == KeyEvent.VK_LEFT && direction != "right") {
+		} else if (keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_A && direction != "right") {
 			direction = "left";
 		}
 	}
